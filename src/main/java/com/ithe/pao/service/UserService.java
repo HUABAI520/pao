@@ -13,9 +13,11 @@ import java.util.List;
 */
 public interface UserService extends IService<User> {
 
+    User getSafetyUser(User originUser);
+
     /*
-        根据标签搜索用户
-        tagList 用户拥有的标签
-        * */
-    int searchUsersByTags(List<String> tagList);
+            根据标签搜索用户
+            tagList 用户拥有的标签
+            * */
+    List<User> searchUsersByTags(List<String> tagList);
 }
